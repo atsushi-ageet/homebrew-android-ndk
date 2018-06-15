@@ -11,9 +11,6 @@ class AndroidNdkAT13b < Formula
   # As of r10e, only a 64-bit version is provided
   depends_on :arch => :x86_64
 
-  conflicts_with "crystax-ndk",
-    :because => "both install `ndk-build`, `ndk-gdb` and `ndk-stack` binaries"
-
   def install
     bin.mkpath
 
