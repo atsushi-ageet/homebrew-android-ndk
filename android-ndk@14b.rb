@@ -1,9 +1,9 @@
-class AndroidNdkR12b < Formula
+class AndroidNdkAT14b < Formula
   desc "Android native-code language toolset"
   homepage "https://developer.android.com/ndk/index.html"
-  url "https://dl.google.com/android/repository/android-ndk-r12b-darwin-x86_64.zip"
-  version "r12b"
-  sha256 "2bdef9143a2c7680fcb7c9fd54fe85013d591f106aea43831eba5e13e10db77e"
+  url "https://dl.google.com/android/repository/android-ndk-r14b-darwin-x86_64.zip"
+  version "r14b"
+  sha256 "f5373dcb8ddc1ba8a4ccee864cba2cbdf500b2a32d6497378dfd32b375a8e6fa"
   version_scheme 1
 
   bottle :unneeded
