@@ -2,9 +2,9 @@ class AndroidNdkAT17b < Formula
   desc "Android native-code language toolset"
   homepage "https://developer.android.com/ndk/index.html"
   url "https://dl.google.com/android/repository/android-ndk-r17b-darwin-x86_64.zip"
-  version "r17b"
+  version "1"
   sha256 "d21072c04ffcf8a723a4dba3837c886bd30c18c0623a4d0ddc53850e2222d27f"
-  version_scheme 1
+  version_scheme 2
 
   bottle :unneeded
 
@@ -27,6 +27,7 @@ class AndroidNdkAT17b < Formula
     EOS
     ndk_exec.chmod 0755
     %w[ndk-build ndk-depends ndk-gdb ndk-stack ndk-which].each { |app| bin.install_symlink ndk_exec => app }
+    share.install_symlink prefix => "android-ndk"
   end
 
   def caveats; <<~EOS

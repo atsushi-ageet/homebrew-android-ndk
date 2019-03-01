@@ -2,9 +2,9 @@ class AndroidNdkAT19 < Formula
   desc "Android native-code language toolset"
   homepage "https://developer.android.com/ndk/index.html"
   url "https://dl.google.com/android/repository/android-ndk-r19-darwin-x86_64.zip"
-  version "r19"
+  version "1"
   sha256 "04159ade2fc5c7d055248cf65664039b8596f4b9ee3fbc44a9bf2ce2ee28d95d"
-  version_scheme 1
+  version_scheme 2
 
   bottle :unneeded
 
@@ -27,6 +27,7 @@ class AndroidNdkAT19 < Formula
     EOS
     ndk_exec.chmod 0755
     %w[ndk-build ndk-depends ndk-gdb ndk-stack ndk-which].each { |app| bin.install_symlink ndk_exec => app }
+    share.install_symlink prefix => "android-ndk"
   end
 
   def caveats; <<~EOS
